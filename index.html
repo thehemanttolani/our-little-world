@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171329"><title>Our Little World 💗</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main id="gate" class="gate">
+    <div class="gate-card">
+      <div class="orb">♡</div><p class="eyebrow">A LITTLE PLACE FOR TWO</p>
+      <h1>Our Little World</h1><p class="muted">Just you, me, and everything in between.</p>
+      <form id="pin-form">
+        <label for="pin">Enter your shared PIN</label>
+        <input id="pin" type="password" inputmode="numeric" maxlength="12" placeholder="••••" required>
+        <button class="primary" type="submit">Enter our world <span>→</span></button>
+      </form>
+      <p id="gate-error" class="error" aria-live="polite"></p>
+      <p class="tiny">No names. No profiles. Just our space.</p>
+    </div>
+  </main>
+  <main id="app" class="app hidden">
+    <header class="topbar">
+      <div><div class="brand">♡ <span>our little world</span></div><div id="status-line" class="status"><i></i> Connecting…</div></div>
+      <button id="invite-btn" class="ghost" title="Copy invite link">↗ Invite</button>
+    </header>
+    <section class="welcome"><p class="eyebrow">OUR PRIVATE SPACE</p><h1>A little closer,<br><em>even from afar.</em></h1><p id="presence-text" class="muted">Checking if your person is here…</p></section>
+    <section class="chat-card">
+      <div class="chat-head"><div><h2>Our conversation</h2><p class="muted tiny">Messages stay here while either of you is away.</p></div><span class="heart-dot">♥</span></div>
+      <div id="messages" class="messages"><div class="empty">Your story starts with a hello. 💗</div></div>
+      <form id="message-form" class="composer"><input id="message-input" maxlength="2000" autocomplete="off" placeholder="Write something sweet…" required><button class="send" aria-label="Send message">➤</button></form>
+    </section>
+    <section class="call-card">
+      <div><p class="eyebrow">WHEN WORDS AREN'T ENOUGH</p><h2>Spend a moment together</h2><p class="muted tiny">Calls work when both devices are online. Allow microphone/camera access.</p></div>
+      <div class="call-actions"><button id="audio-call" class="call-btn">☎ Audio</button><button id="video-call" class="call-btn video">▣ Video</button><button id="hangup" class="call-btn end hidden">End call</button></div>
+      <p id="call-status" class="tiny muted" aria-live="polite">No active call</p>
+      <video id="remote-video" autoplay playsinline></video><video id="local-video" autoplay muted playsinline></video>
+      <audio id="remote-audio" autoplay></audio>
+    </section>
+    <footer>Made with a little love <span>♥</span></footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body></html>
